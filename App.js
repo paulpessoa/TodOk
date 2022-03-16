@@ -1,4 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
+import Task from './components/Task';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -10,6 +10,13 @@ export default function App() {
         <Text style={styles.sectionTitle}> Today's Tasks</Text>
         <View style={styles.items}>
           {/* This is where the tasks will go!*/}
+          <Task text={'task 1'}/>
+          <Task text={'task 2'}/>
+          <Task text={'task 3'}/>
+          <Task text={'task 4'}/>
+          <Task text={'task 5'}/>
+          <Task/>
+         
         </View>
       </View>
     </View>
