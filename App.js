@@ -1,16 +1,19 @@
 import React,  {useState} from "react";
-import { StyleSheet, Text, View, KeyboardAvoidingView, TextInput, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, KeyboardAvoidingView, TextInput, TouchableOpacity, Keyboard } from "react-native";
 import Task from "./components/Task";
 
 
 export default function App() {
   const [task, setTask] = useState();
-
   const [taskItems, setTaskItems] = useState([]);
 
   const handleAddTask = () => {
+    Keyboard.dismiss();
     setTaskItems([...taskItems, task])
     setTask(null);
+
+
+
     console.log(task);
   }
 
@@ -23,20 +26,18 @@ export default function App() {
           {/* This is where the tasks will go!*/}
           {
             taskItems.map((item, index) => {
-              return <Task key={index} text={item} />
+             return <Task key={index} text={item} />
             })
           }
-          <Task text={"task 1"} />
-          <Task text={"task 2"} />
+         {/* <Task text={"task 1"} />
+          <Task text={"task 2"} />*/}
 
         </View>
       </View>
 
       {/* This is where the tasks will go!*/}
       <KeyboardAvoidingView
-        //  behavior={Plataform.OS === "ios" ? "padding" : "heigth"}
-        style={styles.writeTaskWrapper}
-      >
+        style={styles.writeTaskWrapper}>
         <TextInput style={styles.input} placeholder={"write a task"} value={task} onChangeText={text => setTask(text)} />
 
         <TouchableOpacity onPress={() => handleAddTask()}>
