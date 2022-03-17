@@ -1,6 +1,6 @@
 # TodOk
 
-[<img src="./assets/home.png" alt="App Image">](https://linkedin.com/in/paulmspessoa/)
+[<img src="./assets/todokphoto.png" alt="App Image">](https://linkedin.com/in/paulmspessoa/)
 
 npm install --global expo-cli
 

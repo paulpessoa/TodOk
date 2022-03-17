@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "todok",
+    "name": "TodOk List",
     "slug": "todok",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "I really loved building this app.\nA simple Todo List was created to list daily tasks using React Native and exploring some properties and mobile elements, the data is saved in the Storage cache.",
+    "githubUrl": "https://github.com/paulpessoa/TodOk"
   }
 }
